@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ruby_blog/src/models/topic.dart';
+import 'package:ruby_blog/src/repository/api_manager.dart';
 
 class TopicPage extends StatefulWidget {
   final Topic? topic;
@@ -41,7 +42,9 @@ class _TopicPageState extends State<TopicPage> {
               icon: const Icon(Icons.edit),
             ),
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                deleteTopic(widget.topic?.id);
+              },
               icon: const Icon(Icons.delete),
             )
           ],

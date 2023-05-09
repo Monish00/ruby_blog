@@ -28,6 +28,11 @@ class MyApp extends StatelessWidget {
             primary: Colors.white70,
             secondary: Colors.white70,
           ),
+          textTheme: const TextTheme(
+            titleMedium: TextStyle(
+              color: Colors.white70,
+            ),
+          ),
         ),
       ),
     );

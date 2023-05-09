@@ -8,12 +8,12 @@ class RouteGenerator {
     final args = settings.arguments;
     switch (settings.name) {
       case '/home':
-        return MaterialPageRoute(builder: (_) => const Home());
+        return MaterialPageRoute(builder: (_) => Home());
       case '/topic':
         return MaterialPageRoute(
             builder: (_) => TopicPage(topic: args as Topic));
       default:
-        return MaterialPageRoute(builder: (_) => const Home());
+        return MaterialPageRoute(builder: (_) => Home());
     }
   }
 }

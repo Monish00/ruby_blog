@@ -3,8 +3,11 @@ import 'package:provider/provider.dart';
 import 'package:ruby_blog/src/provider/blog_provider.dart';
 import 'package:ruby_blog/src/widgets/drawer.dart';
 
+import '../widgets/addTopic_widget.dart';
+
 class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
+  Home({Key? key}) : super(key: key);
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   State<Home> createState() => _HomeState();
@@ -62,8 +65,8 @@ class _HomeState extends State<Home> {
                     ],
                   ),
                   Row(
-                    children: [
-                      const Text(
+                    children: const [
+                      Text(
                         'Topics',
                         style: TextStyle(
                           fontWeight: FontWeight.w700,
@@ -71,11 +74,8 @@ class _HomeState extends State<Home> {
                           color: Colors.white,
                         ),
                       ),
-                      const Spacer(),
-                      ElevatedButton(
-                        onPressed: () {},
-                        child: const Text('Add Topic'),
-                      ),
+                      Spacer(),
+                      AddTopicWidget(),
                     ],
                   ),
                   const SizedBox(
